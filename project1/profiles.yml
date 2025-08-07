@@ -1,0 +1,13 @@
+willibald_dwa:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: EUFXFNV-QBEYOND-PARTNER
+      user: VPARAB
+      private_key_path: ~/.ssh/snowflake_key.p8
+      role: QBEYOND_DS_RL
+      database: SANDBOXES
+      warehouse: QBEYOND_DS_WH
+      schema: WILLIBALD_DEV
+      threads: 4
