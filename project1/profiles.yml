@@ -1,13 +1,14 @@
-willibald_dwa:
-  target: dev
+project1:
   outputs:
     dev:
-      type: snowflake
       account: EUFXFNV-QBEYOND-PARTNER
-      user: VPARAB
-      private_key_path: ~/.ssh/snowflake_key.p8
-      role: QBEYOND_DS_RL
       database: SANDBOXES
-      warehouse: QBEYOND_DS_WH
+      password: EthanNW@7n775680
+      role: QBEYOND_DS_RL
       schema: WILLIBALD_DEV
-      threads: 4
+      threads: 1
+      type: snowflake
+      user: VPARAB
+      warehouse: QBEYOND_DS_WH
+  target: dev
+
