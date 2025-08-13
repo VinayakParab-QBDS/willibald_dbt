@@ -1,20 +1,23 @@
 {{ config(materialized='view') }}
 
+WITH src AS (
+    {{ add_webshop_metadata('Bestellung') }}
+)
+
 {%- set yaml_metadata -%}
-source_model: 'source_account'
+source_model: 'src'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 
-    hk_account_h:
-        - account_number
-        - account_key
-    hd_account_s:
+    hk_bestellung_h:
+        - BESTELLUNGID
+        - KUNDEID
+    hd_bestellung_s:
         is_hashdiff: true
         columns:
-            - name
-            - address
-            - phone
-            - email
+            - KREDITKARTE
+            - GUELTIGBIS
+            - KKFIRMA
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}
