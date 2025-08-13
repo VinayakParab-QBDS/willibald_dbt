@@ -1,16 +1,16 @@
 version: 2
 
 sources:
-  - name: webshop
-    database: SANDBOXES
-    schema: "{{ target.schema }}"
-    tables:
-      - name: Kunde
-      - name: Bestellung
-
   - name: roadshow
     database: SANDBOXES
     schema: "{{ target.schema }}"
     tables:
-      - name: Kunde
-      - name: Bestellung
+      - name: ROADSHOW_BESTELLUNG
+      - name: ROADSHOW_KUNDE
+
+  - name: webshop
+    database: SANDBOXES
+    schema: "{{ target.schema }}"
+    tables:
+      - name: WEBSHOP_KUNDE
+      - name: WEBSHOP_BESTELLUNG
