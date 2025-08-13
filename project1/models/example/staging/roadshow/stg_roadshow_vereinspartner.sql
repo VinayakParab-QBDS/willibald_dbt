@@ -5,9 +5,9 @@ source_model: 'stg_roadshow_meta_vereinspartner'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 
-    hk_bestellung_h:
+    hk_vereinspartner_h:
         - VEREINSPARTNERID
-    hd_bestellung_s:
+    hd_vereinspartner_s:
         is_hashdiff: true
         columns:
             - KUNDEIDVEREIN

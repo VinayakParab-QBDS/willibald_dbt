@@ -5,9 +5,9 @@ source_model: 'stg_roadshow_meta_produkt'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 
-    hk_bestellung_h:
+    hk_produkt_h:
         - PRODUKTID
-    hd_bestellung_s:
+    hd_produkt_s:
         is_hashdiff: true
         columns:
             - BEZEICHNUNG

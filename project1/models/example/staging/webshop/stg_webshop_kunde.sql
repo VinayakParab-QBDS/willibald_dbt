@@ -5,9 +5,9 @@ source_model: 'stg_webshop_meta_kunde'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 
-    hk_bestellung_h:
+    hk_kunde_h:
         - KUNDEID
-    hd_bestellung_s:
+    hd_kunde_s:
         is_hashdiff: true
         columns:
             - VORNAME

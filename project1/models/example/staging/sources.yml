@@ -7,6 +7,9 @@ sources:
     tables:
       - name: ROADSHOW_BESTELLUNG
       - name: ROADSHOW_KUNDE
+      - name: ROADSHOW_RS_BESTELLUNG
+      - name: ROADSHOW_VEREINSPARTNER
+      - name: ROADSHOW_PRODUKT
 
   - name: webshop
     database: SANDBOXES
@@ -14,3 +17,11 @@ sources:
     tables:
       - name: WEBSHOP_KUNDE
       - name: WEBSHOP_BESTELLUNG
+      - name: WEBSHOP_WOHNORT
+      - name: WEBSHOP_LIEFERADRESSE
+      - name: WEBSHOP_VEREINSPARTNER
+      - name: WEBSHOP_KATEGORIE
+      - name: WEBSHOP_PRODUKT
+      - name: WEBSHOP_POSITION
+      - name: WEBSHOP_LIEFERUNG
+      - name: WEBSHOP_LIEFERDIENST
