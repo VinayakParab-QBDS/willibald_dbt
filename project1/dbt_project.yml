@@ -32,5 +32,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   project1:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
+      +schema: "{{ target.schema }}"
       +materialized: view
+    raw_vault:
+      +schema: "{{ target.schema }}"
+      +materialized: table
+    business_vault:
+      +schema: "{{ target.schema }}"
+      +materialized: table
+    datamarts:
+      +schema: "{{ target.schema }}"
+      +materialized: table

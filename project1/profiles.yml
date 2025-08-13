@@ -26,7 +26,7 @@ project1:
       database: SANDBOXES
       password: EthanNW@7n775680
       role: QBEYOND_DS_RL
-      schema: WILLIBALD_INTEGRATION
+      schema: WILLIBALD_INT
       threads: 1
       type: snowflake
       user: VPARAB

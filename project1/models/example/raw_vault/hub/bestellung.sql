@@ -1,12 +1,19 @@
 {{ config(materialized='incremental') }}
 
-{% set hub_configs = [
-  {
-    "entity": "kunde",
-    "source_model": "stg_customer",
-    "business_keys": ["kunde_id"],
-    "record_source": "Webshop"
-  }
-] %}
+{%- set yaml_metadata -%}
+hashkey: 'bestellung_kunde_hk'
+business_keys: 
+    - BESTELLUNGID
+    - KUNDEID
+source_models:
+    - name: stg_roadshow_bestellung
+      rsrc_static: '*ROADSHOW*'
+    - name: stg_webshop_bestellung
+      hk_column: 'bestellung_kunde_hk'
+      bk_columns:
+          - BESTELLUNGID
+          - KUNDEID
+      rsrc_static: '*WEBSHOP*'
+{%- endset -%}
 
-{{ generate_all_hubs(hub_configs) }}
+{{ datavault4dbt.hub(yaml_metadata=yaml_metadata) }}
