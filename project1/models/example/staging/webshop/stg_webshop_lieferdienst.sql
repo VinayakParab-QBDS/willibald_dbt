@@ -12,8 +12,8 @@ hashed_columns:
         columns:
             - NAME
             - TELEFON
-            - GEBURTSDATUM
             - FAX
+            - EMAIL
             - STRASSE
             - HAUSNUMMER
             - PLZ

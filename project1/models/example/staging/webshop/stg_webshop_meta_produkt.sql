@@ -1,3 +1,3 @@
 {{ config(materialized='view') }}
 
-{{ add_webshop_metadata('WEBSHOP_produkt') }}
+{{ add_webshop_metadata('WEBSHOP_PRODUKT') }}
