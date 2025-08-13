@@ -1,11 +1,7 @@
 {{ config(materialized='view') }}
 
-WITH src AS (
-    {{ add_webshop_metadata('Bestellung') }}
-)
-
 {%- set yaml_metadata -%}
-source_model: 'src'
+source_model: 'stg_webshop_meta_bestellung'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 
@@ -15,9 +11,8 @@ hashed_columns:
     hd_bestellung_s:
         is_hashdiff: true
         columns:
-            - KREDITKARTE
-            - GUELTIGBIS
-            - KKFIRMA
+            - BESTELLDATUM
+            - WUNSCHDATUM
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}

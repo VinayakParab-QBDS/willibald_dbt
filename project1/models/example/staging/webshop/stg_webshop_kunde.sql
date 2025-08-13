@@ -1,11 +1,7 @@
 {{ config(materialized='view') }}
 
-WITH src AS (
-    {{ add_webshop_metadata('Kunde') }}
-)
-
 {%- set yaml_metadata -%}
-source_model: 'src'
+source_model: 'stg_webshop_meta_kunde'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 

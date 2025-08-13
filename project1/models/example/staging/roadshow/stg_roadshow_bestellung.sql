@@ -1,11 +1,7 @@
 {{ config(materialized='view') }}
 
-WITH src AS (
-    {{ add_roadshow_metadata('Bestellung') }}
-)
-
 {%- set yaml_metadata -%}
-source_model: 'src'
+source_model: 'stg_roadshow_meta_bestellung'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 
