@@ -4,8 +4,17 @@
 source_model: 'stg_webshop_meta_position'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
-hashed_columns: 
-    hk_position_h:
+hashed_columns:
+    hk_bestellung_h:
+        - BESTELLUNGID
+    hk_bestellung_pos_h:
+        - BESTELLUNGID
+        - POSID
+    hk_produkt_h:
+        - PRODUKTID
+    hk_spezlieferadr_h:
+        - SPEZLIEFERADRID
+    hk_position_l:
         - BESTELLUNGID
         - POSID
         - PRODUKTID
