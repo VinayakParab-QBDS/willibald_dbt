@@ -7,7 +7,8 @@ rsrc: 'edwRecordSource'
 hashed_columns: 
     hk_liefer_h:
         - LIEFERADRID
-        - KUNDEID
+    hk_kunde_h:
+        - KUNDEID        
     hd_liefer_s:
         is_hashdiff: true
         columns:
