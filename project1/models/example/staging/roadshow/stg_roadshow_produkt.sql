@@ -10,6 +10,7 @@ hashed_columns:
     hd_produkt_s:
         is_hashdiff: true
         columns:
+            - KATID
             - BEZEICHNUNG
             - UMFANG
             - TYP
