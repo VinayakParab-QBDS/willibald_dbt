@@ -5,4 +5,3 @@ SELECT 'DROP VIEW "' || table_schema || '"."' || table_name || '";' AS drop_stat
 FROM information_schema.views
 WHERE table_schema = 'WILLIBALD_DEV'
   AND table_catalog = 'SANDBOXES';
-
