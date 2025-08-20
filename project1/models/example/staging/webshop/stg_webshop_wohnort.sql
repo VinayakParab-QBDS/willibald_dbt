@@ -8,6 +8,8 @@ hashed_columns:
     hk_wohnort_h:
         - KUNDEID
         - VON
+    hk_wohnort_kunde_l:
+        - KUNDEID
     hd_wohnort_s:
         is_hashdiff: true
         columns:

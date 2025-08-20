@@ -7,8 +7,6 @@ rsrc: 'edwRecordSource'
 hashed_columns: 
     hk_produkt_h:
         - PRODUKTID
-    hk_kategorie_h:
-        - KATID
     hk_produkt_kategorie_l:
         - PRODUKTID
         - KATID
