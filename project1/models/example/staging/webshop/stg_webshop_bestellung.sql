@@ -7,9 +7,11 @@ rsrc: 'edwRecordSource'
 hashed_columns:
   hk_bestellung_h:                    
     - BESTELLUNGID
-  hk_kunde_h:                         
+  hk_bestellung_kunde_l:                         
+    - BESTELLUNGID
     - KUNDEID
-  hk_lieferadresse_h:                 
+  hk_bestellung_lieferadresse_l:                 
+    - BESTELLUNGID
     - ALLGLIEFERADRID
   hd_bestellung_s:                    
     is_hashdiff: true
