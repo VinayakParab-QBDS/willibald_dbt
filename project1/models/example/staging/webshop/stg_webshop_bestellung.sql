@@ -4,6 +4,8 @@
 source_model: 'stg_webshop_meta_bestellung'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
+column_cast:
+  BESTELLUNGID: varchar
 hashed_columns:
   hk_bestellung_h:                    
     - BESTELLUNGID
