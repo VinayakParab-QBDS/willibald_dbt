@@ -1,3 +1,3 @@
 {{ config(materialized='view') }}
 
-{{ add_webshop_metadata('WEBSHOP_BESTELLUNG') }}
+{{ combine_webshop_bestellung_metadata('WEBSHOP_BESTELLUNG') }}
