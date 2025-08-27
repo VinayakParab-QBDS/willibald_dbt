@@ -7,8 +7,12 @@ rsrc: 'edwRecordSource'
 hashed_columns:
   hk_bestellung_h:            
     - BESTELLUNGID
-  hk_kunde_h:            
+  hk_produkt_h:             
+    - PRODUKTID
+  hk_kunde_h:                
     - KUNDEID
+  hk_vereinspartner_h:       
+    - VEREINSPARTNERID    
   hk_bestellung_kunde_l:      
     - BESTELLUNGID
     - KUNDEID
