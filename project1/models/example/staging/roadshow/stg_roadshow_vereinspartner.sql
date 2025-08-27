@@ -7,6 +7,8 @@ rsrc: 'edwRecordSource'
 hashed_columns: 
     hk_vereinspartner_h:
         - VEREINSPARTNERID
+    hk_kundeverein_h:
+        - KUNDEIDVEREIN
     hk_vereinspartner_kundeidverein_l:
         - VEREINSPARTNERID
         - KUNDEIDVEREIN

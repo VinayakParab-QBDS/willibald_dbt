@@ -7,6 +7,8 @@ rsrc: 'edwRecordSource'
 hashed_columns: 
     hk_kategorie_h:
         - KATID
+    hk_oberkategorie_h:
+        - OBERKATID
     hk_kategorie_oberkategorie_l:
         - KATID
         - OBERKATID        
