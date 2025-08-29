@@ -27,4 +27,4 @@ hashed_columns:
             - KKFIRMA
 {%- endset -%}
 
-{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}
+{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: 

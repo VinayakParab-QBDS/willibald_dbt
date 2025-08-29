@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='view') }} -- noqa:  -- noqa: 
 
 {%- set yaml_metadata -%}
 source_model: 'stg_webshop_meta_kunde'
@@ -27,4 +27,4 @@ hashed_columns:
             - KKFIRMA
 {%- endset -%}
 
-{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}
+{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: : 

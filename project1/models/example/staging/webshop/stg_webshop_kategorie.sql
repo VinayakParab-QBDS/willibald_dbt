@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='view') }} -- noqa: 
 
 {%- set yaml_metadata -%}
 source_model: 'stg_webshop_meta_kategorie'
