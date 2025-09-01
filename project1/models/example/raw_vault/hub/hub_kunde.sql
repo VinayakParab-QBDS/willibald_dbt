@@ -5,7 +5,7 @@ hashkey: 'hk_kunde_h'
 business_keys: 
     - KUNDEID
 source_models:
-    - name: stg_roadshow_kunde
+    - name: stg_roadshow_kunde_from_rs_bestellung
       rsrc_static: '*Roadshow*'
     - name: stg_webshop_kunde
       bk_columns:

@@ -7,7 +7,7 @@ column_cast:
 business_keys: 
     - BESTELLUNGID
 source_models:
-    - name: stg_roadshow_bestellung
+    - name: stg_roadshow_bestellung_from_rs_bestellung
       rsrc_static: '*Roadshow*'
     - name: stg_webshop_bestellung
       bk_columns:
