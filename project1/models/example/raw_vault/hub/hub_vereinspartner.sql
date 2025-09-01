@@ -5,7 +5,7 @@ hashkey: 'hk_vereinspartner_h'
 business_keys: 
     - VEREINSPARTNERID
 source_models:
-    - name: stg_roadshow_vereinspartner
+    - name: stg_roadshow_vereinspartner_from_rs_bestellung
       rsrc_static: '*Roadshow*'
     - name: stg_webshop_vereinspartner
       bk_columns:

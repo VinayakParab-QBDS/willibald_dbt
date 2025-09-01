@@ -1,3 +1,3 @@
 {{ config(materialized='view') }}
 
-{{ add_roadshow_metadata('ROADSHOW_PRODUKT') }}
+{{ add_roadshow_metadata('ROADSHOW_PRODUKT') }} -- noqa: 
