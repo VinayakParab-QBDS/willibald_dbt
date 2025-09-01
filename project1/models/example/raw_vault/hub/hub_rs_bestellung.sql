@@ -7,4 +7,4 @@ business_keys:
 source_models: stg_roadshow_rs_bestellung
 {%- endset -%}
 
-{{ datavault4dbt.hub(yaml_metadata=yaml_metadata) }}
+{{ datavault4dbt.hub(yaml_metadata=yaml_metadata) }} -- noqa: 
