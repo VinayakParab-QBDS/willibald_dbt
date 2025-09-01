@@ -15,4 +15,4 @@ source_models:
       rsrc_static: '*Webshop*'
 {%- endset -%}
 
-{{ datavault4dbt.hub(yaml_metadata=yaml_metadata) }}
+{{ datavault4dbt.hub(yaml_metadata=yaml_metadata) }} -- noqa: 
