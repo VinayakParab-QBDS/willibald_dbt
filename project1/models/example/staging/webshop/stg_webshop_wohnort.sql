@@ -20,6 +20,8 @@ hashed_columns:
             - PLZ
             - ORT
             - LAND
+
+multi_active_key: VON
 {%- endset -%}
 
-{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: 
+{{ datavault4dbt.ma_stage(yaml_metadata=yaml_metadata) }} -- noqa:
