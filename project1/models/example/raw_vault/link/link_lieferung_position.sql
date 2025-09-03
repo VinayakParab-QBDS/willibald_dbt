@@ -8,5 +8,4 @@ foreign_hashkeys:
 source_models: stg_webshop_lieferung
 {%- endset -%}    
 
-{{ datavault4dbt.link(yaml_metadata=yaml_metadata) }}
-
+{{ datavault4dbt.link(yaml_metadata=yaml_metadata) }} -- noqa: 
