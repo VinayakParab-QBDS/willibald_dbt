@@ -4,6 +4,7 @@
 source_model: 'stg_webshop_meta_wohnort'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
+multi_active: true
 hashed_columns: 
     hk_wohnort_h:
         - KUNDEID
@@ -24,4 +25,4 @@ hashed_columns:
 multi_active_key: VON
 {%- endset -%}
 
-{{ datavault4dbt.ma_stage(yaml_metadata=yaml_metadata) }} -- noqa:
+{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa:
