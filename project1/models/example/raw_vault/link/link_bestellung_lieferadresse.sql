@@ -1,11 +1,11 @@
 {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-link_hashkey: 'hk_vereinspartner_kundeidverein_l'
+link_hashkey: 'hk_bestellung_lieferadresse_l'
 foreign_hashkeys:
-    - 'HK_VEREINSPARTNER_H'
-    - 'HK_KUNDEVEREIN_H'
-source_models: stg_webshop_vereinspartner
+    - 'HK_BESTELLUNG_H'
+    - 'hk_liefer_h'
+source_models: stg_webshop_bestellung
 {%- endset -%}    
 
 {{ datavault4dbt.link(yaml_metadata=yaml_metadata) }} -- noqa: 

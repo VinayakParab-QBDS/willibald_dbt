@@ -9,6 +9,10 @@ column_cast:
 hashed_columns:
   hk_bestellung_h:                    
     - BESTELLUNGID
+  hk_kunde_h:                         
+    - KUNDEID
+  hk_liefer_h:                        
+    - ALLGLIEFERADRID
   hk_bestellung_kunde_l:                         
     - BESTELLUNGID
     - KUNDEID
@@ -23,4 +27,4 @@ hashed_columns:
       - RABATT
 {%- endset -%}
 
-{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}
+{{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: 
