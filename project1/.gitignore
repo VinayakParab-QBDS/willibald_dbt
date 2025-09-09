@@ -4,3 +4,5 @@ dbt_packages/
 logs/
 *.png
 *.sqlfluff
+input.sql
+output_snowflake.sql
