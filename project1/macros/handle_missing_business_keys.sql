@@ -1,4 +1,4 @@
-{% macro handle_business_keys(source_relation,
+{% macro handle_missing_business_keys(source_relation,
                               natural_key,
                               surrogate_columns) %}
     {# 
