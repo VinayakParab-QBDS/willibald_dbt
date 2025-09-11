@@ -6,7 +6,7 @@ WITH flagged AS (
         COUNT(DISTINCT {{ attribute_columns | join(" || ") }}) 
             OVER (PARTITION BY {{ key_column }}) AS distinct_attr_count,
         ROW_NUMBER() OVER (PARTITION BY {{ key_column }} ORDER BY {{ timestamp_column }} DESC) AS rn
-    FROM {{ source_relation }}
+    FROM ({{ source_relation }})
 ),
 
 cleaned AS (

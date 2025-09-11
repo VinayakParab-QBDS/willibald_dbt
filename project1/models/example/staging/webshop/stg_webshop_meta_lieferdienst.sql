@@ -1,6 +1,6 @@
 {{ config(materialized='view') }}
 
-{{ handle_business_keys(
+{{ handle_missing_business_keys(
      source_relation = (
          add_webshop_metadata('WEBSHOP_LIEFERDIENST')
      ),
