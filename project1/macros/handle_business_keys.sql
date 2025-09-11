@@ -1,4 +1,4 @@
-{% macro prepare_business_key(source_relation,
+{% macro handle_business_keys(source_relation,
                               natural_key,
                               surrogate_columns) %}
     {# 
@@ -14,9 +14,9 @@
                 when {{ natural_key }} is not null
                      then cast({{ natural_key }} as string)
                 else
-                     {{ dbtvault.hash(columns = surrogate_columns) }}
+                     {{ datavault4dbt.hash(columns = surrogate_columns) }}
             end as business_key_final,
             case when {{ natural_key }} is null then true else false end as IS_GENERATED_KEY
-        from {{ source_relation }}
+        from ({{ source_relation }})
     )
 {% endmacro %}
