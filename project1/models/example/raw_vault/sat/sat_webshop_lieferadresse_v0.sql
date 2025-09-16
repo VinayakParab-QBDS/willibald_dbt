@@ -10,6 +10,7 @@ src_payload:
     - PLZ
     - ORT
     - LAND
+    - IS_MISSING_FK
 source_model: 'stg_webshop_lieferadresse'
 {%- endset -%}    
 

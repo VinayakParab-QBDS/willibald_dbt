@@ -1,12 +1,7 @@
 {% macro handle_missing_business_keys(source_relation,
                               natural_key,
                               surrogate_columns) %}
-    {# 
-       source_relation  : a ref/source for the base table
-       natural_key      : string name of the natural key column
-       surrogate_columns: list of column names (or expressions) to hash
-                          when natural_key is null
-    #}
+
     (
         select
             *,
