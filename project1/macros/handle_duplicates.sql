@@ -1,4 +1,4 @@
-{% macro flag_duplicates(source_relation, key_column, attribute_columns, timestamp_column='edwLoadDate') %}
+{% macro handle_duplicates(source_relation, key_column, attribute_columns, timestamp_column='edwLoadDate') %}
 
 WITH flagged AS (
     SELECT *,

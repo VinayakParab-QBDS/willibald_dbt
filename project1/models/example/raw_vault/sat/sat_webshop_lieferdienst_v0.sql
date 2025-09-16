@@ -13,6 +13,7 @@ src_payload:
     - PLZ
     - ORT
     - LAND
+    - IS_GENERATED_KEY
 source_model: 'stg_webshop_lieferdienst'
 {%- endset -%}    
 

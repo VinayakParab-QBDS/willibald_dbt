@@ -11,6 +11,7 @@ src_payload:
     - PREIS
     - PFLANZORT
     - PFLANZABSTAND
+    - duplicate_type
 source_model: 'stg_webshop_produkt'
 {%- endset -%}    
 
