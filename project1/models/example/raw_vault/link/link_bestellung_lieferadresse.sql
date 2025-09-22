@@ -4,7 +4,7 @@
 link_hashkey: 'hk_bestellung_lieferadresse_l'
 foreign_hashkeys:
     - 'HK_BESTELLUNG_H'
-    - 'hk_liefer_h'
+    - 'HK_LIEFERADRESSE_H'
 source_models: stg_webshop_bestellung
 {%- endset -%}    
 

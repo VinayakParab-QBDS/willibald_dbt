@@ -9,6 +9,7 @@ hashed_columns:
         - BESTELLUNGID
         - POSID
         - LIEFERADRID
+        - LIEFERDIENSTID
     hk_bestellung_h:
         - BESTELLUNGID
     hk_position_h:

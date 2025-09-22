@@ -2,8 +2,8 @@
 
 {%- set yaml_metadata -%}
 sat_v0: 'sat_webshop_lieferadresse_v0'
-hashkey: 'hk_liefer_h'
-hashdiff: 'hd_liefer_s'   
+hashkey: 'hk_lieferadresse_h'
+hashdiff: 'hd_lieferadresse_s'   
 ledts_alias: 'loadenddate'
 add_is_current_flag: true
 {%- endset -%}    

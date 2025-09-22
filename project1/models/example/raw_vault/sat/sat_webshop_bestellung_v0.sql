@@ -8,6 +8,7 @@ src_payload:
     - WUNSCHDATUM
     - RABATT
 source_model: 'stg_webshop_bestellung'
+
 {%- endset -%}    
 
 {{ datavault4dbt.sat_v0(yaml_metadata=yaml_metadata) }} -- noqa: 
