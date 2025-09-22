@@ -11,7 +11,7 @@ hashed_columns:
     - BESTELLUNGID
   hk_kunde_h:                         
     - KUNDEID
-  hk_liefer_h:                        
+  hk_lieferadresse_h:                        
     - ALLGLIEFERADRID
   hk_bestellung_kunde_l:                         
     - BESTELLUNGID
@@ -25,6 +25,7 @@ hashed_columns:
       - BESTELLDATUM
       - WUNSCHDATUM
       - RABATT
+
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: 

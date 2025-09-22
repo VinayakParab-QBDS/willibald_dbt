@@ -1,11 +1,11 @@
 {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-link_hashkey: 'hk_lieferung_position_l'
+link_hashkey: 'hk_position_produkt_l'
 foreign_hashkeys:
-    - 'HK_BESTELLUNG_H'
-    - 'hk_position_h'
-source_models: stg_webshop_lieferung
+    - 'HK_POSITION_H'
+    - 'HK_PRODUKT_H'
+source_models: stg_webshop_position
 {%- endset -%}    
 
 {{ datavault4dbt.link(yaml_metadata=yaml_metadata) }} -- noqa: 

@@ -1,8 +1,8 @@
 {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-parent_hashkey: 'hk_liefer_h'
-src_hashdiff: 'hd_liefer_s'
+parent_hashkey: 'hk_lieferadresse_h'
+src_hashdiff: 'hd_lieferadresse_s'
 src_payload:
     - STRASSE
     - HAUSNUMMER

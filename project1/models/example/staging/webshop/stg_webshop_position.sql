@@ -8,6 +8,8 @@ hashed_columns:
     hk_position_h:
         - BESTELLUNGID
         - POSID
+    hk_produkt_h:
+        - PRODUKTID
     hk_position_bestellung_l:
         - POSID
         - BESTELLUNGID
@@ -22,6 +24,7 @@ hashed_columns:
     hd_position_s:
         is_hashdiff: true
         columns:
+            - BESTELLUNGID
             - MENGE
             - PREIS
 {%- endset -%}

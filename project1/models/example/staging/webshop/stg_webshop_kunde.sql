@@ -25,6 +25,8 @@ hashed_columns:
             - KREDITKARTE
             - GUELTIGBIS
             - KKFIRMA
+hard_delete: true
+record_end_date_column: 'edwEndDate'
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: : 

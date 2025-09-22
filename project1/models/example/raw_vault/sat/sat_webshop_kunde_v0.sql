@@ -15,6 +15,9 @@ src_payload:
     - GUELTIGBIS
     - KKFIRMA
 source_model: 'stg_webshop_kunde'
+
+hard_delete: true
+record_end_date_column: 'edwEndDate'
 {%- endset -%}    
 
 {{ datavault4dbt.sat_v0(yaml_metadata=yaml_metadata) }} -- noqa: 

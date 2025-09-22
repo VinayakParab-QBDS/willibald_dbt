@@ -1,7 +1,7 @@
 {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-hashkey: 'hk_liefer_h'
+hashkey: 'hk_lieferadresse_h'
 business_keys: 
         - LIEFERADRID
 source_models: stg_webshop_lieferadresse
