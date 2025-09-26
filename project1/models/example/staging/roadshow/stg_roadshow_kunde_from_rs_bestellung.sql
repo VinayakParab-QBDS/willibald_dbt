@@ -7,6 +7,13 @@ rsrc: 'edwRecordSource'
 hashed_columns: 
     hk_kunde_h:
         - KUNDEID
+        - rsrc
+    hd_kunde_s:
+        is_hashdiff: true
+        columns:
+          - KREDITKARTE
+          - GUELTIGBIS
+          - KKFIRMA
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: 

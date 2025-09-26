@@ -7,6 +7,7 @@ rsrc: 'edwRecordSource'
 hashed_columns: 
     hk_produkt_h:
         - PRODUKTID
+        - rsrc
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: 

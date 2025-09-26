@@ -7,6 +7,7 @@ rsrc: 'edwRecordSource'
 hashed_columns: 
     hk_vereinspartner_h:
         - VEREINSPARTNERID
+        - rsrc
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }} -- noqa: 

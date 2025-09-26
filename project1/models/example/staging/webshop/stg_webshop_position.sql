@@ -8,6 +8,8 @@ hashed_columns:
     hk_position_h:
         - BESTELLUNGID
         - POSID
+    hk_bestellung_h:
+        - BESTELLUNGID
     hk_produkt_h:
         - PRODUKTID
     hk_position_bestellung_l:

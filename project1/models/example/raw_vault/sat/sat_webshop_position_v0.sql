@@ -4,7 +4,6 @@
 parent_hashkey: 'hk_position_h'
 src_hashdiff: 'hd_position_s'
 src_payload:
-    - BESTELLUNGID
     - MENGE
     - PREIS
 source_model: 'stg_webshop_position'
