@@ -9,6 +9,7 @@ column_cast:
 hashed_columns:
   hk_bestellung_h:                    
     - BESTELLUNGID
+    - rsrc
   hk_kunde_h:                         
     - KUNDEID
   hk_lieferadresse_h:                        

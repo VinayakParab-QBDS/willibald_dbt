@@ -1,13 +1,11 @@
 {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-parent_hashkey: 'hk_vereinspartner_h'
-src_hashdiff: 'hd_vereinspartner_s'
+parent_hashkey: 'hk_lieferung_h'
+src_hashdiff: 'hd_lieferung_s'
 src_payload:
-    - RABATT1
-    - RABATT2
-    - RABATT3
-source_model: 'stg_roadshow_vereinspartner'
+    - LIEFERDATUM
+source_model: 'stg_webshop_lieferung'
 {%- endset -%}    
 
 {{ datavault4dbt.sat_v0(yaml_metadata=yaml_metadata) }} -- noqa: 
