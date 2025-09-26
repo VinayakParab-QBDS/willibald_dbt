@@ -10,6 +10,11 @@ hashed_columns:
   hk_bestellung_h:
     - BESTELLUNGID
     - rsrc
+  hk_bestellung_kunde_l:                         
+    - BESTELLUNGID
+    - KUNDEID
+  hk_kunde_h:
+    - KUNDEID
   hd_bestellung_s:                    
     is_hashdiff: true
     columns:
