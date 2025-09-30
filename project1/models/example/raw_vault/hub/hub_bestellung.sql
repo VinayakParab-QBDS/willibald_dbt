@@ -2,8 +2,6 @@
 
 {%- set yaml_metadata -%}
 hashkey: 'hk_bestellung_h'
-column_cast:
-  BESTELLUNGID: VARCHAR(128)
 business_keys: 
     - BESTELLUNGID
 source_models:
@@ -15,4 +13,4 @@ source_models:
       rsrc_static: '*Webshop*'
 {%- endset -%}
 
-{{ datavault4dbt.hub(yaml_metadata=yaml_metadata) }} -- noqa: 
+{{ datavault4dbt.hub(yaml_metadata=yaml_metadata) }}

@@ -5,7 +5,7 @@ source_model: 'stg_webshop_meta_lieferung'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 hashed_columns: 
-    hk_lieferung_h:
+    hk_lieferung_nl:
         - BESTELLUNGID
         - POSID
         - LIEFERADRID
@@ -14,6 +14,10 @@ hashed_columns:
         - BESTELLUNGID
     hk_position_h:
         - POSID
+    hk_lieferadresse_h:
+        - LIEFERADRID
+    hk_lieferdienst_h:
+        - LIEFERDIENSTID
     hk_lieferung_position_l:
         - BESTELLUNGID
         - POSID

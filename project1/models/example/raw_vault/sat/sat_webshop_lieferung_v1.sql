@@ -2,7 +2,7 @@
 
 {%- set yaml_metadata -%}
 sat_v0: 'sat_webshop_lieferung_v0'
-hashkey: 'hk_lieferung_h'
+hashkey: 'hk_lieferung_nl'
 hashdiff: 'hd_lieferung_s'   
 ledts_alias: 'loadenddate'
 add_is_current_flag: true
