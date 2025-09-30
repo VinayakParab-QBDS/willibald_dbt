@@ -6,12 +6,9 @@ position_latest as (
     select
         hk_position_h,
         menge,
-        preis,
-        row_number() over (
-            partition by hk_position_h
-            order by ldts desc
-        ) as rn
+        preis
     from {{ ref('sat_webshop_position_v1') }}
+    where is_current = 1
 ),
 
 -- 2 Latest BESTELLUNG satellite row (gives discount & order date)
@@ -19,12 +16,9 @@ bestellung_latest as (
     select
         hk_bestellung_h,
         rabatt,
-        bestelldatum,
-        row_number() over (
-            partition by hk_bestellung_h
-            order by ldts desc
-        ) as rn
+        bestelldatum
     from {{ ref('sat_webshop_bestellung_v1') }}
+    where is_current = 1
 )
 
 select

@@ -4,6 +4,9 @@
 source_model: 'stg_webshop_meta_position'
 ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
+column_cast:
+  BESTELLUNGID: varchar
+  POSID: varchar
 hashed_columns:
     hk_position_h:
         - BESTELLUNGID
@@ -12,6 +15,7 @@ hashed_columns:
         - BESTELLUNGID
     hk_produkt_h:
         - PRODUKTID
+        - rsrc
     hk_position_bestellung_l:
         - POSID
         - BESTELLUNGID
