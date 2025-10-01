@@ -6,12 +6,9 @@ ldts: 'edwLoadDate'
 rsrc: 'edwRecordSource'
 column_cast:
   GUELTIGBIS: varchar
-  BESTELLUNGID: varchar
-  PRODUKTID: varchar
 hashed_columns: 
   hk_bestellung_h:
     - BESTELLUNGID
-    - rsrc
   hk_position_h:
     - BESTELLUNGID
     - PRODUKTID
