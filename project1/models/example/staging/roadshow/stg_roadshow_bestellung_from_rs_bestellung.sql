@@ -18,6 +18,7 @@ hashed_columns:
   hk_bestellung_produkt_l:
     - BESTELLUNGID
     - PRODUKTID
+    - rsrc
   hk_kunde_h:
     - KUNDEID
   hk_produkt_h:
