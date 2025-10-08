@@ -1,0 +1,15 @@
+{{ config(materialized='incremental') }}
+
+{%- set yaml_metadata -%}
+link_hashkey: 'hk_bestellung_kunde_l'
+foreign_hashkeys: 
+    - 'HK_BESTELLUNG_H'
+    - 'HK_KUNDE_H'
+source_models:
+    - name: stg_roadshow_bestellung_from_rs_bestellung
+      rsrc_static: '*Roadshow*'
+    - name: stg_webshop_bestellung
+      rsrc_static: '*Webshop*'
+{%- endset -%}    
+
+{{ datavault4dbt.link(yaml_metadata=yaml_metadata) }}
