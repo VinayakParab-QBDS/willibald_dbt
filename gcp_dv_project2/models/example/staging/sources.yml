@@ -1,7 +1,7 @@
 # raw_sources.yml
 sources:
   - name: raw_data
-    database: velvety-glazing-472909-h6        # BigQuery project
-    schema: raw             # BigQuery dataset
+    database: velvety-glazing-472909-h6        
+    schema: raw             
     tables:
       - name: RS_Bestellung_Tag_1
