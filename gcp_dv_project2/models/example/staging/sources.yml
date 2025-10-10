@@ -1,27 +1,7 @@
-version: 2
-
+# raw_sources.yml
 sources:
-  - name: roadshow
-    database: SANDBOXES
-    schema: "{{ target.schema }}"
+  - name: raw_data
+    database: velvety-glazing-472909-h6        # BigQuery project
+    schema: raw             # BigQuery dataset
     tables:
-      - name: ROADSHOW_BESTELLUNG
-      - name: ROADSHOW_KUNDE
-      - name: ROADSHOW_RS_BESTELLUNG
-      - name: ROADSHOW_VEREINSPARTNER
-      - name: ROADSHOW_PRODUKT
-
-  - name: webshop
-    database: SANDBOXES
-    schema: "{{ target.schema }}"
-    tables:
-      - name: WEBSHOP_KUNDE
-      - name: WEBSHOP_BESTELLUNG
-      - name: WEBSHOP_WOHNORT
-      - name: WEBSHOP_LIEFERADRESSE
-      - name: WEBSHOP_VEREINSPARTNER
-      - name: WEBSHOP_KATEGORIE
-      - name: WEBSHOP_PRODUKT
-      - name: WEBSHOP_POSITION
-      - name: WEBSHOP_LIEFERUNG
-      - name: WEBSHOP_LIEFERDIENST
+      - name: RS_Bestellung_Tag_1

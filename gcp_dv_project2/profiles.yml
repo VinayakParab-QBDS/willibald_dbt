@@ -5,8 +5,8 @@ gcp_dv_project2:
       type: bigquery
       method: service-account
       project: velvety-glazing-472909-h6
-      dataset: dbt_dev   # BigQuery dataset name
+      dataset: staging   
       threads: 4
       keyfile: C:/Users/Vinayak-SitaramParab/keys/bq_service_account.json
       timeout_seconds: 300
-      location: EU        # or US, depending on your dataset region
+      location: US        

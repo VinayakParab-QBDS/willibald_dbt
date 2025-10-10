@@ -1,0 +1,17 @@
+{
+  "name": "gcs_to_bigq_template",
+  "image": "gcr.io/PROJECT_ID/gcs-to-bq-template-image:latest",
+  "description": "Load CSV from GCS into BigQuery table",
+  "sdk_info": {
+    "language": "PYTHON"
+  },
+  "parameters": [
+    {"name": "input", "label": "GCS path to CSV", "help_text":"gs://bucket/path/file.csv"},
+    {"name": "table_name", "label": "Destination table name"},
+    {"name": "dataset", "label": "BigQuery dataset"},
+    {"name": "project", "label": "GCP project"},
+    {"name": "temp_location", "label": "GCS temp location"},
+    {"name": "region", "label": "Dataflow region"},
+    {"name": "delimiter", "label": "CSV delimiter", "default": ","}
+  ]
+}
