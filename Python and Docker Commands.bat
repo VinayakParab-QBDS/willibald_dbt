@@ -2,13 +2,18 @@
 
 docker build -t europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq:latest .
 
-docker run europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq --input gs://willibald_bucket/raw/RS_Bestellung_Tag1.csv --table_name RS_Bestellung_Tag1 --dataset raw --project velvety-glazing-472909-h6 --temp_location gs://willibald_bucket/tmp --region europe-west3
 
---With my own service account
+docker run europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq --input gs://willibald_bucket/raw/RS_Bestellung_Tag_1.csv --table_name RS_Bestellung_Tag_1 --dataset raw --project velvety-glazing-472909-h6 --temp_location gs://willibald_bucket/tmp --region europe-west3
+
+--With my own service account--
 docker run -v C:/Users/Vinayak-SitaramParab/keys/dataflow_bq_access.json:/opt/dataflow_bq_access.json -e GOOGLE_APPLICATION_CREDENTIALS="/opt/dataflow_bq_access.json" europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq --input gs://willibald_bucket/raw/RS_Bestellung_Tag_1.csv --table_name RS_Bestellung_Tag_1 --dataset raw --project velvety-glazing-472909-h6 --temp_location gs://willibald_bucket/tmp --region europe-west3
 
---With Default Service Account
-docker run -v C:/Users/Vinayak-SitaramParab/keys/bq_service_account.json:/opt/bq_service_account.json -e GOOGLE_APPLICATION_CREDENTIALS="/opt/bq_service_account.json" europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq --input gs://willibald_bucket/raw/RS_Bestellung_Tag_1.csv --table_name RS_Bestellung_Tag_1 --dataset raw --project velvety-glazing-472909-h6 --temp_location gs://willibald_bucket/tmp --region europe-west3
+--With Default Service Account---
+docker run -v C:/Users/Vinayak-SitaramParab/keys/bq_service_account.json:/opt/bq_service_account.json -e GOOGLE_APPLICATION_CREDENTIALS="/opt/bq_service_account.json" europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq --input gs://willibald_bucket/raw/RS_Bestellung_Tag_3.csv --table_name RS_Bestellung_Tag_3 --dataset raw --project velvety-glazing-472909-h6 --temp_location gs://willibald_bucket/tmp --region europe-west1
+
+--WIth Webshow data------
+
+docker run -v C:/Users/Vinayak-SitaramParab/keys/bq_service_account.json:/opt/bq_service_account.json -e GOOGLE_APPLICATION_CREDENTIALS="/opt/bq_service_account.json" europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq --input gs://willibald_bucket/raw/Webshop_bestellung.csv --table_name Webshop_bestellung --dataset raw --project velvety-glazing-472909-h6 --temp_location gs://willibald_bucket/tmp --region europe-west1
 
 
 

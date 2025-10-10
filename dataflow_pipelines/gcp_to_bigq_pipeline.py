@@ -24,7 +24,6 @@ def read_gcs_header(gcs_path, delimiter=','):
 
 def infer_bq_schema_from_header(headers):
     """
-    Infers BigQuery schema from headers (all STRING type for simplicity).
     Returns a comma-separated string, e.g., "col1:STRING, col2:STRING"
     """
     return ', '.join([f"{col}:STRING" for col in headers])
@@ -40,7 +39,7 @@ class ParseCSV(beam.DoFn):
         yield record
 
 # -----------------------------
-# Main Pipeline
+# Pipeline
 # -----------------------------
 
 def run(argv=None):
