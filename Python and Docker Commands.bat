@@ -16,7 +16,6 @@ docker run -v C:/Users/Vinayak-SitaramParab/keys/bq_service_account.json:/opt/bq
 docker run -v C:/Users/Vinayak-SitaramParab/keys/bq_service_account.json:/opt/bq_service_account.json -e GOOGLE_APPLICATION_CREDENTIALS="/opt/bq_service_account.json" europe-west3-docker.pkg.dev/velvety-glazing-472909-h6/dataflow-images/beam-gcs-bq --input gs://willibald_bucket/raw/Webshop_bestellung.csv --table_name Webshop_bestellung --dataset raw --project velvety-glazing-472909-h6 --temp_location gs://willibald_bucket/tmp --region europe-west1
 
 
-
 --python Commands-------------------------------------
 
 
@@ -38,5 +37,25 @@ gcloud iam service-accounts add-iam-policy-binding dataflow-bq-access@velvety-gl
 conda create --name willibald_gcp python=3.8
 
 conda activate willibald_gcp
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----DBT Docker-------
+
+docker build -t dbt-dv-bq:latest .
+
+docker run --rm `
+  -v "${PWD}:/app" `
+  -v "C:/Users/Vinayak-SitaramParab/keys/bq_service_account.json:/app/bq_service_account.json" `
+  -e "GOOGLE_APPLICATION_CREDENTIALS=/app/bq_service_account.json" `
+  dbt-dv-bq:latest
+
+
+
+  
+
 
 
