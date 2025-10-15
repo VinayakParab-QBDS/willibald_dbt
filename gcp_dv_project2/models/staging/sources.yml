@@ -4,4 +4,15 @@ sources:
     database: velvety-glazing-472909-h6        
     schema: raw             
     tables:
-      - name: RS_Bestellung_Tag_1
+      - name: RS_Bestellung_ALL
+      - name: Webshop_Kunde
+      - name: Webshop_Lieferung
+      - name: Webshop_bestellung
+      - name: Webshop_lieferadresse
+      - name: Webshop_lieferdienst
+      - name: Webshop_position
+      - name: Webshop_produkt
+      - name: Webshop_produktkategorie
+      - name: Webshop_vereinspartner
+      - name: Webshop_wohnort
+

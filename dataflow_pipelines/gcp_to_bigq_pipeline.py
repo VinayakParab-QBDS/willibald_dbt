@@ -64,7 +64,8 @@ def run(argv=None):
         project=args.project,
         region=args.region,
         temp_location=args.temp_location,
-        runner='DataflowRunner',
+        # runner='DataflowRunner',
+        runner='DirectRunner',  # Change to 'DataflowRunner' when running on GCP
         save_main_session=True
     )
 
@@ -80,7 +81,7 @@ def run(argv=None):
         rows | 'WriteToBQ' >> beam.io.WriteToBigQuery(
             table=f'{args.project}:{args.dataset}.{args.table_name}',
             schema=schema_str,
-            write_disposition=beam.io.BigQueryDisposition.WRITE_TRUNCATE,
+            write_disposition=beam.io.BigQueryDisposition.WRITE_TRUNCATE, 
             create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
             custom_gcs_temp_location=args.temp_location
         )
